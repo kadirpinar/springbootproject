@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" (click)="navigateToHomePage()">EMPLOYEES</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a  (click)="navigateToHomePage()">Home Page</a></li>
+        <li><a (click)="navigateToITData()">IT</a></li>
+        <li><a >Accountancy</a></li>
+        <li><a >Management</a></li>
+        <li><a >Driver</a></li>
+        <li><a (click)="navigateToInsertData()">Insert Employee</a></li>
+        <button  id="logout" class="btn btn-dark" (click)=logout()>Logout</button>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<div id="middle">
+  <table class="demotbl">
+    <tr>
+      <th > İd</th>
+      <th >Name</th>
+      <th >Surname</th>
+      <th >Department</th>
+      <th >Salary</th>
+    </tr>
+    <tr  *ngFor="let p of It" >
+      <td >
+        {{It.id}}
+      </td>
+      <td >
+        {{It.name}}
+      </td>
+      <td >
+        {{It.surname}}
+      </td>
+      <td >
+        {{It.department}}
+      </td>
+      <td >
+        {{It.salary}}
+        <button style="float: right" class="btn btn-danger" (click)="deletePerson(p.id)">Delete</button>
+        <button  style="float: right" class="btn btn-warning" (click)=navigateToUpdateData(p)>Düzenle</button>
+      </td>
+    </tr>
+  </table>
+</div>
+

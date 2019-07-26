@@ -1,0 +1,24 @@
+.login-css {
+  height:400px;
+  width:900px;
+  margin:auto;
+  padding:300px;
+  position: center;
+}
+
+.login-css input {
+  padding:5px;
+  margin:5px
+}
+#btn{
+  margin-left: 5px;
+}
+
+.back{
+  top:0;
+  bottom: 0;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

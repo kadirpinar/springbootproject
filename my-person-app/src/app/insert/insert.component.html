@@ -1,0 +1,8 @@
+<form method="post" enctype="multipart/form-data"  #myform="ngForm" (ngSubmit)="onClickSubmit(myform.value)">
+  <input type ="text" name="id" placeholder="Id" ngModel><br/>
+  <input type ="text" name="name" placeholder="Name" ngModel><br/>
+  <input type ="text" name="surname" placeholder="Surname" ngModel><br/>
+  <input type ="text" name="department" placeholder="Department" ngModel><br/>
+  <input type ="text" name="salary" placeholder="Salary" ngModel><br/>
+  <input type="submit" value="Submit" >
+</form>

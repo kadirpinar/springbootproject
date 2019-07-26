@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" (click)="navigateToHomePage()">EMPLOYEES</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a  (click)="navigateToHomePage()">Home Page</a></li>
+        <li><a (click)="navigateToITData()">IT</a></li>
+        <li><a >Accountancy</a></li>
+        <li><a >Management</a></li>
+        <li><a >Driver</a></li>
+        <li><a (click)="navigateToInsertData()">Insert Employee</a></li>
+        <button  id="logout" class="btn btn-dark" (click)=logout()>Logout</button>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<div id="middle">
+  <table class="demotbl">
+    <tr>
+      <th > İd</th>
+      <th >Name</th>
+      <th >Surname</th>
+      <th >Department</th>
+      <th >Salary</th>
+    </tr>
+    <tr  >
+      <td >
+        1
+      </td>
+      <td >
+        Kadir
+      </td>
+      <td >
+        Pınar
+      </td>
+      <td >
+        Management
+      </td>
+      <td >
+        10000
+        <button style="float: right" class="btn btn-danger" (click)="deletePerson(p.id)">Delete</button>
+        <button  style="float: right" class="btn btn-warning" (click)=navigateToUpdateData(p)>Düzenle</button>
+      </td>
+    </tr>
+    <tr  >
+      <td >
+        2
+      </td>
+      <td >
+        Jon
+      </td>
+      <td >
+        Snow
+      </td>
+      <td >
+        Driver
+      </td>
+      <td >
+        1000
+        <button style="float: right" class="btn btn-danger" (click)="deletePerson(p.id)">Delete</button>
+        <button  style="float: right" class="btn btn-warning" (click)=navigateToUpdateData(p)>Düzenle</button>
+      </td>
+    </tr>
+    <tr  >
+      <td >
+        3
+      </td>
+      <td >
+        Arya
+      </td>
+      <td >
+        Stark
+      </td>
+      <td >
+        IT
+      </td>
+      <td >
+        3000
+        <button style="float: right" class="btn btn-danger" (click)="deletePerson(p.id)">Delete</button>
+        <button  style="float: right" class="btn btn-warning" (click)=navigateToUpdateData(p)>Düzenle</button>
+      </td>
+    </tr>
+    <tr  >
+      <td >
+        4
+      </td>
+      <td >
+        Tony
+      </td>
+      <td >
+        Stark
+      </td>
+      <td >
+        IT
+      </td>
+      <td >
+        10000
+        <button style="float: right" class="btn btn-danger" (click)="deletePerson(p.id)">Delete</button>
+        <button  style="float: right" class="btn btn-warning" (click)=navigateToUpdateData(p)>Düzenle</button>
+      </td>
+    </tr>
+    <tr  >
+      <td >
+        5
+      </td>
+      <td >
+        Daenerys
+      </td>
+      <td >
+        Targaryen
+      </td>
+      <td >
+        Accountancy
+      </td>
+      <td >
+        4000
+        <button style="float: right" class="btn btn-danger" (click)="deletePerson(p.id)">Delete</button>
+        <button  style="float: right" class="btn btn-warning" (click)=navigateToUpdateData(p)>Düzenle</button>
+      </td>
+    </tr>
+  </table>
+</div>
+
